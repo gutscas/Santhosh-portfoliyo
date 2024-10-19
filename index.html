@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhosh k-Portfolio </title>
+    <meta name="description" content="Explore the portfolio of Veeraabinash M, a seasoned Software Developer with expertise in Vue.js, Nuxt.js, and TypeScript. View projects, experience, and contact information.">
+    <meta name="keywords" content="Veeraabinash M, Software Developer, Vue.js, Nuxt.js, TypeScript, Web Development, Frontend Developer, Chennai, Software Development Engineer, Lobb Logistics, Phantom Smart Solutions, Wynwy Technologies">
+    <meta name="author" content="Veeraabinash M">
+    <link rel="stylesheet" href="main.css" >
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.Veeraabinash M.com/">
+    <meta property="og:title" content="Veeraabinash M - Software Developer Portfolio">
+    <meta property="og:description" content="Discover the work and skills of Veeraabinash M, a Vue.js and Nuxt.js expert. View projects, experience, and get in touch for collaborations.">
+    <meta property="og:image" content="https://www.Veeraabinash M.com/assets/portfolio-preview.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.Veeraabinash M.com/">
+    <meta name="twitter:title" content="Veeraabinash M - Software Developer Portfolio">
+    <meta name="twitter:description" content="Explore Veeraabinash M's professional portfolio. See projects, skills, and contact information.">
+    <meta name="twitter:image" content="https://www.Veeraabinash M.com/assets/portfolio-preview.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.Veeraabinash M.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Stylesheets -->
+    <link href="https://db.onlinewebfonts.com/c/7cc6719bd5f0310be3150ba33418e72e?family=Comic+Sans+MS" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
+
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 6rem;
+            margin-right: 3.2rem;
+        }
+
+        header {
+            background: #1c1c1c;
+            padding: 10px 0;
+            margin: 0; /* Remove margin */
+            position: fixed !important; /* Make header sticky */
+            top: 0; /* Stick to the top */
+            z-index: 9999;
+            width: 100%;
+        
+        }
+        .edu-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .edu-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center}
+
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff !important;
+        }
+
+        .nav-link:hover {
+            color: #ffb53a !important; /* Highlight active link */
+            font-weight: bold;
+        }
+       
+
+        .nav-link i {
+            margin-right: 8px;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #1c1c1c;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 23px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        p {
+            line-height: 1.6;
+            padding: 0 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* ul li {
+            margin-bottom: 15px;
+        } */
+
+        footer {
+            background: #1c1c1c;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 15px;
+            margin-bottom: 30px;
+        }
+
+        /*for loader*/
+
+        /* Loader styles */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #1c1c1c;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .navbar-dark .navbar-toggler {
+            border: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .proj{
+            margin-top: 1.2rem;
+        }
+        .center-head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .current-role{
+            color: #ffb53a;
+            margin-top: 6px;
+            margin-left: 1.3rem
+        }
+        .footer-content {
+            display: flex;
+            margin-top: 1rem;
+        }
+        #contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+        }
+
+        .list-group-item {
+            border: none;
+            background: #ffffff;
+        }
+/*todo   for mobile*/
+        @media (max-width: 768px) {
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            header {
+                background: #1c1c1c;
+                padding: 10px 0;
+                margin: 0; /* Remove margin */
+                width: 100%;
+            }
+
+            .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+                display: flex;
+                justify-content: space-between; /* Aligns items to the left and right */
+                align-items: center;
+                margin: 0; /* Remove margin */
+                padding: 0; /* Remove padding */
+                width: 100%;
+            }
+            
+            .center-head{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .timeline-item h3 {
+                font-size: 20px;
+            }
+
+            .timeline-item ul {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                background: #ffffff;
+                padding: 15px;
+                margin: 0; /* Remove margin */
+                width: 100%;
+            }
+          .edu-row{
+            display: flex;
+            flex-direction: column;
+           }
+
+            .edu-2{
+                margin-top: 1.3rem;
+            }
+            #contact{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .list-group {
+                display: flex;
+                flex-direction: column;
+            }
+            .row {
+                --bs-gutter-x: 1.5rem;
+                --bs-gutter-y: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: calc(-1* var(--bs-gutter-y));
+                margin-right: calc(-.5* var(--bs-gutter-x));
+                margin-left: calc(-.5* var(--bs-gutter-x));
+                padding: 1rem;
+            }
+
+            .footer-content{
+                display: flex;
+                margin-top: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+            .center-head {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .current-role{
+                color: #ffb53a;
+                margin-top: 6px;
+                margin-left: 0;
+            }
+            .loader-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /*todo mobile view end */
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .contact-info {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .contact-info p {
+                margin-right: 20px;
+            }
+        }
+
+        main {
+            padding-top: 60px; /* Adjust this value based on the header height */
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding-top: 70px; /* Adjust this value based on the header height for mobile */
+            }
+        }
+        .button button{
+            background-color: green;
+            color: white;
+        }
+        .button{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="loader-wrapper">
+    <span class="loader"></span>
+</div>
+<header class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler left-head" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <span class="center-head"><a class="navbar-brand" href="#">Santhosh K </a>
+        <h2 class="current-role"></h2>
+        </span>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#summary">🚀 Summary</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">🎓 Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">💻 Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">🛠️ Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">📞 Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="summary" class="container  pt-5">
+        <div class="text-center">
+            <img src="K. Santhosh_lV CSE  (1).jpg" alt="Veeraabinash M - Software Developer" class="profile-pic img-thumbnail">
+            <h1 class="my-3" >Hi Guys 🚀</h1>
+            <p >Self-motivated, enthusiastic aspiring developer with a foundation in computer science and programming, Eager to leverage academic knowledge and practical skills to contribute effectively to a dynamic team and take on new challenges in the field of software development  using python</p>
+        </div>
+    </section>
+
+    <section id="education" class="container ">
+        <h2 class="text-center mb-4">🎓 Education</h2>
+        <div class="edu-row">  
+            <div class="edu-item">
+                <h3>Bachelor of Engineering- CGPA: 7.2 3 </h3>
+                <span>(June 2020 - May 2024)</span>
+                <span>Sri raaja raajan collage of Engineering and Technology,</span>
+                <span> Amaravathipudur, karaikudi, India</span>
+
+            </div>
+            <div class="edu-item edu-2" >
+                <h3> S.S.L.C - 83% (June 2017 – May 2018) </h3>
+                <span>Government Hr. Sec. School </span>
+                <span>Thiruvegampet,Sivaganga dst</span>
+                <h3>  H.S.C : 67.67 % (June 2019 – May 2020)</h3>
+                <span>Government Hr. Sec. School </span>
+                <span>Thiruvegampet,Sivaganga dst</span>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="text-center mb-4">💻 Technical Skills</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-group">
+                    <li class="list-group-item"> Web Development: HTML, CSS, JavaScript </li>
+                    <li class="list-group-item">Programming Languages: Python</li>
+                    <li class="list-group-item">Databases: SQL,Oracle</li>
+                   
+                </ul>
+            </div>
+           
+        </div>
+    </section>
+
+    
+
+    <section id="projects" class="container ">
+        <h2 class="text-center mb-4">🛠️ Projects</h2>
+        <div class="row">
+            <div class="proj">
+                <h3>SPOTSTAR</h3>
+                <ul>
+                    <li>	Developed a web-based platform that allows users to create accounts, stream movies, and listen to music.  </li>
+               <li>The platform features a user-friendly interface for easy navigation and content management.</li>
+                    <li> This experiance gave me practical exposure to web devlopment.</li>
+                    <li>Tools Used: HTML, CSS, JAVASCRIPT</li>
+                </ul>
+                <div class="button">
+                    <button onclick="Button()">VIEW</button>
+                    <button onclick="Source()">SOURCECODE</button>
+                </div>
+            </div>
+            
+            <div class="proj">
+                <h3>Zomato -Homepage clone</h3>
+                <ul>
+                    <li> A Zomato clone is a replica of the Zomato food delivery app that allows users to find restaurants, order food, and pay for their meals.</li>
+                    <li> This experiance gave me practical exposure to web devlopment.</li>
+                    <li>Tools Used: HTML, CSS</li>
+                </ul>
+                <div class="button">
+                    <button onclick="Button1()">VIEW</button>
+                    <button onclick="Source1()">SOURCECODE</button>
+                </div>
+            </div>
+            <div class="proj">
+                <h3>Instagram -Loginpage clone</h3>
+                <ul>
+                    <li> An Instagram clone loginage replicates the userinterface of the original Instagram platform.</li>
+                    <li> This experiance gave me practical exposure to web devlopment.</li>
+                    <li>Tools Used: HTML, CSS</li>
+                </ul>
+                <div class="button">
+                    <button onclick="Button2()">VIEW</button>
+                    <button onclick="Source2()">SOURCECODE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section id="contact" class="container">
+        <h2 class="text-center mb-4">📞 Contact</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:santhoshkalangiyam@gmail.com">santhoshkalangiyam@gmail.com</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/santhosh-k-968695319/" target="_blank">Santhosh K</a></p>
+            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/gutscas" target="_blank">Santhosh K</a></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content" style="text-align: center;">
+        <p>&copy; 2024 Santhosh K. All rights reserved.</p> 
+    </div>
+</footer>
+
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader-wrapper');
+    loader.classList.add('fade-out');
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 1000);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    gsap.from('header', { duration: 1, y: '-100%', ease: 'bounce' });
+    gsap.from('.profile-pic', { duration: 1.5, opacity: 0, scale: 0.5, ease: 'elastic' });
+    gsap.from('h1', { duration: 1, opacity: 0, y: -50, delay: 1 });
+    gsap.from('h2, h3', { duration: 1, opacity: 0, x: -50, delay: 1.5, stagger: 0.3 });
+    gsap.from('p, ul', { duration: 1, opacity: 0, x: 50, delay: 2, stagger: 0.3 });
+    gsap.from('button', { duration: 2, opacity: 0, x: 50, delay: 2, stagger: 0.3 });
+    // Highlight active nav link using Intersection Observer
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(id)) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+  function Button(){
+    window.location.href="https://spotstar-webapplicaion.netlify.app"
+  }
+  function Source(){
+    window.location.href="https://github.com/gutscas/Spotstar"
+  }
+  function Button1(){
+    window.location.href="https://gutscas.github.io/zomato-clone/"
+  }
+  function Source1(){
+    window.location.href="https://github.com/gutscas/zomato-clone.git"
+  }
+  function Button2(){
+    window.location.href="https://gutscas.github.io/Instagram-Loginpage/"
+  }
+  function Source2(){
+    window.location.href=" https://github.com/gutscas/Instagram-Loginpage.git"
+  }
+
+</script>
+
+</body>
+</html>
